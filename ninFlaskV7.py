@@ -57,7 +57,7 @@ async def index():
     return f"<h1>登録成功！ {eagm.global_name}さんよろしく！</h1>"
 
 def run():
-    app.run(debug=True,host="0.0.0.0")
+    app.run(debug=False,host="0.0.0.0")
 
 def start():
     Thread(target=run).start()
