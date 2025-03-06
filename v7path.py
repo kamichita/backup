@@ -1,6 +1,6 @@
 import os
 
-BOTTOKEN = "os.getenv("DISCORD_TOKEN")"
+BOTTOKEN = os.getenv("DISCORD_TOKEN")
 CLIENT_ID = "1347091568552841226"
 CLIENT_SECRET = "Cf3y2WcY4rJKtXfxE6LIYPKiuG1zTOiy"
 REDIRECT_URI = "Flaskサーバーが建てられている場所(IPアドレスやドメイン)をここに"
