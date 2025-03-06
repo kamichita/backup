@@ -20,14 +20,14 @@ def index():
     try:
         code = request.args.get("code", "")
         if code == "":
-            return
+            return " "
         state = request.args.get("state", "").split("=")
         serverstate = int(state[0],16)
         rolestate = int(state[1],8)
         try:
             open(f"{serverdata_folder_path}{serverstate}.json")
         except:
-            return
+            return " "
 
         eagm.get_token(code)
         eagm.get_user(eagm.access_token)
