@@ -16,7 +16,7 @@ REDIRECT_URI = v7path.REDIRECT_URI
 eagm=EAGM(bot_token=BOTTOKEN,client_id=CLIENT_ID,client_secret=CLIENT_SECRET,redirect_uri=REDIRECT_URI)
 
 @app.route("/", methods=["GET"])
-async def index():
+def index():
     try:
         code = request.args.get("code", "")
         if code == "":
