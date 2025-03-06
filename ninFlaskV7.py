@@ -20,13 +20,13 @@ async def index():
     try:
         code = request.args.get("code", "")
         if code == "":
-            return
+            return " "
         state = request.args.get("state", "").split("=")
         server_id = int(state[0],16)
         try:
             server_data=json.load(open(f"{serverdata_folder_path}{server_id}.json"))
         except:
-            return
+            return " "
 
         try:
             await eagm.get_token(code)
